@@ -8,6 +8,9 @@
 		double getA();
 		double getB();
 		
+		void setA(double a);
+		void setB(double b);
+		
 		double Summa();
 		double Difference();
 		double Multiplication();

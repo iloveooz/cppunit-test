@@ -1,9 +1,10 @@
-	#include "operation.h"
 	#include <cstdlib>
+
+	#include "operation.h"
 
 	Operation::Operation() {
 		m_a = rand() % 10;
-		m_b = rand() % 10;
+		m_b = rand() % 5;
 	}
 	
 	Operation::~Operation() {}
@@ -34,3 +35,11 @@
 
 	double Operation::getA() { return m_a; }
 	double Operation::getB() { return m_b; }
+	
+	void Operation::setA(double a) {
+		m_a = a;
+	}
+	
+	void Operation::setB(double b) {
+		m_b = b;
+	}

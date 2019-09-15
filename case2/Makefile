@@ -1,13 +1,17 @@
+CC = g++
+STANDART = -std=c++11
+CFLAGS=-c -Wall
+
 all: test program
 
 test: operation.o
-	g++ -std=c++11 -o test.exe test.cpp operation.o -Wall -ldl -lcppunit
+	$(CC) $(STANDART) -o test.exe test.cpp operation.o -Wall -ldl -lcppunit
 
 program: operation.o
-	g++ -std=c++11 -o main.exe operation.o main.cpp -Wall
+	$(CC) $(STANDART) -o main.exe main.cpp operation.o  -Wall
 	
 operation.o: operation.cpp
-	g++ -c -std=c++11 operation.cpp -Wall
+	$(CC) $(STANDART) operation.cpp $(CFLAGS)
 	
 clean:
 	rm -rf *.o test program
